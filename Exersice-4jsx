@@ -1,0 +1,31 @@
+import { useEffect, useState } from "react";
+
+function Clock(){
+    const [time,setTime] = useState(0);
+    const [color,setcolor] = useState("green")
+
+    useEffect(()=>{
+        setInterval(() => {
+            setTime(new Date().toLocaleTimeString());
+        }, 1000);
+    })
+
+    return (
+        <div>
+    
+        <h1>Default props In react js</h1>
+        <select onChange={(e)=>setcolor(e.target.value)} defaultValue={"green"}>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+        </select>
+        <h1 style={{color:color ,backgroundColor:"black",width:"200px",height:"50px",padding:"6px",borderRadius:"6px"}}>{time}</h1>
+
+
+        </div>
+
+
+
+    )
+}
+export default Clock;
