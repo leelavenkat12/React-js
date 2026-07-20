@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+<<<<<<< HEAD
 import Greet from './components/greet.jsx'
 import Header from './components/Header.jsx'
 import Counter from './components/EXERSICES/States/counter.jsx'
@@ -22,5 +23,13 @@ createRoot(document.getElementById('root')).render(
     <BasicEffect />
     <CounterEffect />
     <FetchDataEffect />
+=======
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+>>>>>>> 3e8ff3977ecd63caaf1c360734f0abfe7fd6c305
   </StrictMode>,
 )
